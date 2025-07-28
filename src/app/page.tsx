@@ -2,8 +2,11 @@ import About from "@/components/home/about";
 import InfoCard from "@/components/home/info-card";
 import { ArrowLeftIcon } from "@/components/icons/arrow-left";
 import { Button } from "@/components/ui/button";
+import ActivityCard from "@/components/home/activity-card";
+import HotelCard from "@/components/home/hotel-card";
+import ListLayout from "@/components/home/list-layout";
 
-export default function Home() {
+export function Home() {
   return (
     <div className="w-full bg-white p-4">
       <div className="relative">
@@ -85,24 +88,24 @@ export default function Home() {
         listItem={(data) => <FlightCard {...data} />}
       /> */}
 
-      {/* <ListLayout
-           title="Hotels"
-           href="/hotels"
-           icon="/assets/warehouse.svg"
-           bgColor="bg-neutral-900"
-           data={[...new Array(2)]}
-           listItem={<HotelCard />}
-         />
-   
-         <ListLayout
-           title="Activities"
-           href="/activities"
-           icon="/assets/roadhorizon-1.svg"
-           bgColor="bg-primary-700"
-           data={[...new Array(3)]}
-           btnTextColor="text-primary-600"
-           listItem={<ActivityCard />}
-         /> */}
+      <ListLayout
+        title="Hotels"
+        href="/hotels"
+        icon="/assets/warehouse.svg"
+        bgColor="bg-neutral-900"
+        data={[...new Array(2)]}
+        listItem={() => <HotelCard />}
+      />
+
+      <ListLayout
+        title="Activities"
+        href="/activities"
+        icon="/assets/roadhorizon-1.svg"
+        bgColor="bg-primary-700"
+        data={[...new Array(3)]}
+        btnTextColor="text-primary-600"
+        listItem={() => <ActivityCard />}
+      />
     </div>
   );
 }
