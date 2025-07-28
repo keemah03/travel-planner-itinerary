@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { ListLayoutProps } from "./home.interface";
 
-function ListLayout(props: ListLayoutProps) {
+function ListLayout<T>(props: ListLayoutProps<T>) {
   return (
     <div className={classNames("space-y-4 p-4 my-4", props.bgColor)}>
       <div className="flex justify-between items-center">

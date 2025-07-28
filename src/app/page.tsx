@@ -1,10 +1,11 @@
 import About from "@/components/home/about";
+import ActivityCard from "@/components/home/activity-card";
+import FlightCard from "@/components/home/flight-card";
+import HotelCard from "@/components/home/hotel-card";
 import InfoCard from "@/components/home/info-card";
+import ListLayout from "@/components/home/list-layout";
 import { ArrowLeftIcon } from "@/components/icons/arrow-left";
 import { Button } from "@/components/ui/button";
-import ActivityCard from "@/components/home/activity-card";
-import HotelCard from "@/components/home/hotel-card";
-import ListLayout from "@/components/home/list-layout";
 
 function Home() {
   return (
@@ -78,15 +79,30 @@ function Home() {
         </p>
       </div>
 
-      {/* <ListLayout
+      <ListLayout
         title="Flights"
         href="/flights"
         icon="/assets/airplaneinflight.svg"
         bgColor="bg-neutral-300"
-        data={flights}
+        data={[
+          {
+            id: 1,
+            name: "Flight to Paris",
+            date: new Date("2023-10-01").toISOString(),
+            code: "FL123",
+            durationMins: 120,
+            suite: "Economy",
+            startTime: new Date("2023-10-01T10:00:00Z").toISOString(),
+            price: 200,
+            loadWeightKg: 20,
+            cabinBaggageWeightKg: 7,
+            from: "New York",
+            to: "Paris",
+          },
+        ]}
         btnTextColor="text-primary-600"
         listItem={(data) => <FlightCard {...data} />}
-      /> */}
+      />
 
       <ListLayout
         title="Hotels"

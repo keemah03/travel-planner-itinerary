@@ -13,7 +13,7 @@ export interface InfoCardProps {
   theme: InfoCardTheme;
 }
 
-export interface ListLayoutProps<T = unknown> {
+export interface ListLayoutProps<T> {
   title: string;
   icon: string;
   bgColor: string;
