@@ -6,7 +6,7 @@ import ActivityCard from "@/components/home/activity-card";
 import HotelCard from "@/components/home/hotel-card";
 import ListLayout from "@/components/home/list-layout";
 
-export function Home() {
+function Home() {
   return (
     <div className="w-full bg-white p-4">
       <div className="relative">
